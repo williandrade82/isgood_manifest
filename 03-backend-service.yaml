@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels :
+    app: backend
+  name: isgoobackendservice
+  namespace: isgood
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 9091
+      targetPort: 8080
+      name: web
+      

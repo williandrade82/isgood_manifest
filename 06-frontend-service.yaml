@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels :
+    app: frontend
+  name: frontend-srv
+  namespace: isgood
+spec:
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 8090
+      targetPort: 8090
+      name: angular
+      
